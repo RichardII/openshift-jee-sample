@@ -29,6 +29,8 @@ import javax.ws.rs.Produces;
  *
  */
 
+
+
 @Path("/")
 public class HelloWorld {
     @Inject
@@ -40,6 +42,8 @@ public class HelloWorld {
     public String getHelloWorldJSON() {
         return "{\"result\":\"" + helloService.createHelloMessage("World") + "\"}";
     }
+    
+    
 
     @GET
     @Path("/xml")
