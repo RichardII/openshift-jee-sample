@@ -1,0 +1,51 @@
+Le projet test_mvc_crud
+
+Permet d'apprendre à architecturer une application Java EE (JavaWeb:JSP/Servlet, JDBC, MySQL).
+
+---> architecture  MVC Model-View-Controller dans la partie Boundary
+     https://fr.wikipedia.org/wiki/Mod%C3%A8le-vue-contr%C3%B4leur
+
+---> architecture en couches : Boundary - Control -  Entity - LifeCycle
+      http://objetjava.free.fr/JavaEE/formationEJB/formationJavaEE_Caen.pdf
+
+---> réalisation d'un exemple :   CRUD (pour create, read, update, delete) (parfois appelé SCRUD avec un "S" pour search) 
+      https://fr.wikipedia.org/wiki/CRUD
+
+---> Validation des formulaires JSP:
+       https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/formulaires-le-b-a-ba
+
+---> Validation de l'enregistrement par Mail
+    
+---> Gestion de la session :  HttpSession
+     https://openclassrooms.com/courses/creez-votre-application-web-avec-java-ee/la-session-connectez-vos-clients
+
+
+  
+
+
+
+En résumé de la doc:  cet exemple montre l'utilisation d'une Servlet (Controller)  qui déclenche des JSP(Views), 
+et les appels sont propagés jusqu'au  Model de données via le DAO (qui utilise JDBC <--> MySQL). 
+Donc cet exemple montre comment construire un MVC 2 ( https://fr.wikipedia.org/wiki/Mod%C3%A8le-vue-contr%C3%B4leur ). 
+MVC 2 parce que il n'y a qu'un seul Controller (la seule Servlet). 
+Toutes les actions provenants des utilisateurs passent par cette SERVLET. L'architecture respecte le Design Pattern  : 
+Boundary - Control -  Entity - LifeCycle.  Le VC de MVC 2 se trouve dans la couche Boundary. 
+Voir page 7 de ce document :  http://objetjava.free.fr/JavaEE/formationEJB/formationJavaEE_Caen.pdf
+
+Pour comprendre  Le VC de MVC 2  (le Controller c'est la Servlet)  :  https://user.oc-static.com/files/382001_383000/382400.png
+
+
+Attention ne pas confondre : Control dans (Boundary - Control -  Entity - LifeCycle)  et Controller de MVC 2
+
+
+
+Les architectures  MVC et Boundary - Control -  Entity - LifeCycle sont très bien expliqués par le JavaMan en France : 
+Antonio Gonçalves qui en réalité est portugais d'origine et qui enseigne JAVA à l'université de Coimbra au Portugal (une des premières universités d'Europe comme la Sorbonne). 
+C'est lui qui a introduit en France le DEVOXX France et qui a été professeur au CNAM sous la direction de Jean Louis Dewez avec lequel il a été d'abord étudiant au CNAM. 
+Dans sont premier livre on retrouve toutes les explications sur comment architecturer une application JavaEE (le livre est préfacé par Jean-Louis Dewez professeur au CNAM 
+il y a quelques années un des fondateurs du département d'informatique au CNAM depuis 1965  :  http://static.eyrolles.com/img/2/2/1/2/1/2/6/5/9782212126587_h430.jpg
+On retrouve aussi cette architecture dans ses autres livres :  https://antoniogoncalves.org/
+
+Jean-Louis Dewez : http://deptinfo.cnam.fr/new/spip.php?mot137
+
+
