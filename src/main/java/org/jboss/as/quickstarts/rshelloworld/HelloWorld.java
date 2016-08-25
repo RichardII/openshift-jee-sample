@@ -40,7 +40,7 @@ public class HelloWorld {
     @Path("/json")
     @Produces({ "application/json" })
     public String getHelloWorldJSON() {
-        return "{\"result\":\"" + helloService.createHelloMessage("Le monde") + "\"}";
+        return "{\"result\":\"" + helloService.createHelloMessage("Salut  ggag") + "\"}";
     }
     
     
